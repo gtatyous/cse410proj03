@@ -169,7 +169,6 @@ int main(int argc, char* argv[])
     
     if (is_Dir(arg, loc))
     {
-        cout << "it is a dir"<<endl;
         string argDir = "./" + arg;
         string argBizzaroDir = "./" + argBizzaro;
         readDir (argDir, argBizzaroDir, 1);
@@ -179,6 +178,7 @@ int main(int argc, char* argv[])
         if (is_BizzaroFile(arg))
         {
             cout << "Error: can't create Bizarro file "<<arg<< "; it's already a Bizarro file!! "<<endl;
+            return 0;
         }
         else
         {
@@ -198,6 +198,7 @@ int main(int argc, char* argv[])
         }
 
     }
+    cout << "Operation finished succesfully! " <<endl;
     return 0;
 }
 

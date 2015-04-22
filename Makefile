@@ -1,4 +1,4 @@
-EXE = out
+EXE = proj3
 SOURCES = main.cpp
 OBJECTS := $(SOURCES:%.cpp=%.o)
 CXXFLAGS = -Wall -std=c++11
