@@ -16,7 +16,8 @@ bool is_Dir (string arg, string loc)
     dir = opendir(loc.c_str());
     while((entry = readdir(dir)) != NULL)
     {
-        if ((entry->d_name == arg) && (entry->d_type == DT_DIR)) {return true;}
+        if (entry->d_name[0] != '.' && entry->d_name == arg && entry->d_type == DT_DIR)
+        {return true;}
     }
     closedir(dir);
     return false;
