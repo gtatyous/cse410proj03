@@ -43,9 +43,7 @@ bool is_Dir (string arg, string loc)
     dir = opendir(loc.c_str());
     while((entry = readdir(dir)) != NULL)
     {
-        cout << "in is_Dir; name: " << entry->d_name << endl;
-        if (entry->d_name == arg && entry->d_type == DT_DIR)
-        {return true;}
+        if (entry->d_type == DT_DIR && entry->d_name == arg) {return true;}
     }
     closedir(dir);
     return false;
@@ -173,7 +171,7 @@ int main(int argc, char* argv[])
     }
     else //it's a file
     {
-        cout << "The argument provided is a directory" << endl;
+        cout << "The argument provided is a file" << endl;
         string readFilePath = loc + "/" + arg;
         string writeFilePath = loc + "/" + argBizzaro;
         
