@@ -43,7 +43,7 @@ bool is_Dir (string arg, string loc)
     dir = opendir(loc.c_str());
     while((entry = readdir(dir)) != NULL)
     {
-        if (entry->d_type == DT_DIR && entry->d_name == arg) {return true;}
+        if (entry->d_type == DT_DIR && entry->d_name == arg) {return true;closedir(dir);}
     }
     closedir(dir);
     return false;
