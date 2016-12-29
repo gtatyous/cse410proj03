@@ -1,4 +1,3 @@
-Student NetID: gtatyous (Yousef Gtat), I am working alone.
 
 Compilation tested on: ned, carl, marge and skinner
 
